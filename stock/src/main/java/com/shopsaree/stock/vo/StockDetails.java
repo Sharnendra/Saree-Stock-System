@@ -7,6 +7,7 @@ public class StockDetails {
 	private int costPerPice;
 	private int profitMargin;
 	private int totalCostToCustomer;
+	
 	public String getSareeType() {
 		return sareeType;
 	}
@@ -37,14 +38,14 @@ public class StockDetails {
 	public void setTotalCostToCustomer(int totalCostToCustomer) {
 		this.totalCostToCustomer = totalCostToCustomer;
 	}
-	public StockDetails(StockBuilder stockBuilder) {
+	public StockDetails(Builder stockBuilder) {
 		this.sareeType = stockBuilder.sareeType;
 		this.quantity = stockBuilder.quantity;
 		this.costPerPice = stockBuilder.costPerPice;
 		this.profitMargin = stockBuilder.profitMargin;
 		this.totalCostToCustomer = stockBuilder.totalCostToCustomer;
 	}
-	public static class StockBuilder{
+	public static class Builder{
 		
 		private String sareeType;
 		private int quantity;
@@ -52,18 +53,18 @@ public class StockDetails {
 		private int profitMargin;
 		private int totalCostToCustomer;
 		
-		public StockBuilder(String sareeType, int quantity, int costPerPice) {
+		public Builder(String sareeType, int quantity, int costPerPice) {
 			this.sareeType = sareeType;
 			this.quantity = quantity;
 			this.costPerPice = costPerPice;
 		}
 
-		public StockBuilder setProfitMargin(int profitMargin) {
+		public Builder setProfitMargin(int profitMargin) {
 			this.profitMargin = profitMargin;
 			return this;
 		}
 
-		public StockBuilder setTotalCostToCustomer(int totalCostToCustomer) {
+		public Builder setTotalCostToCustomer(int totalCostToCustomer) {
 			this.totalCostToCustomer = totalCostToCustomer;
 			return this;
 		}

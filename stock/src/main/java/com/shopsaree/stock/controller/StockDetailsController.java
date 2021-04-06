@@ -12,6 +12,6 @@ public class StockDetailsController {
 	
 	@GetMapping("/getStockDetails")
 	public StockDetails getStockDetails() {
-		return new StockDetails.StockBuilder("Benarasi", 50, 1250).build();
+		return new StockDetails.Builder("Benarasi", 50, 1250).build();
 	}
 }
